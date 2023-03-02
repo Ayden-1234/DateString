@@ -1,0 +1,93 @@
+<html>
+        <body><html>
+    <head>
+        <title>Date and String</title>
+    </head>
+    <body>
+        <h1>Date and String</h1>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/North_season.jpg/1200px-North_season.jpg" target="blank_">Space and time image</a>
+        <p id="date"></p> 
+        <div class="spacetime">
+        <div class="orbit">   
+        <div class="counterrotate">
+        <div class="spacerotate">
+        </div>
+        </div>
+        </div>
+        </div>           
+    </body>
+</html>           </body>
+        <style>h1{
+    background-color:blue;
+}
+a:link{
+    background-color:green;
+    color:yellow;
+}
+a:active{
+    background-color:red;
+}
+a:visited{
+    background-color:blueviolet;
+}
+p::first-letter{
+    font-size:42px;
+    color:cornflowerblue;
+    text-shadow: 4px 6px 8px cyan;
+}
+p::first-line{
+    color:dodgerblue;
+}
+a:hover{
+    background-color:darkblue;
+}
+.spacetime{
+    width:150px; 
+    height:150px;
+    background-color:yellow;
+    border-radius:100px;
+    border: 4px gold solid;
+    position:absolute;
+    left:150px
+}
+.orbit{
+    animation-name:circle;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+}
+.counterrotate{
+    animation-name:earth;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+}
+.spacerotate{
+    width:100px; 
+    height:100px;
+    background-color:cyan;
+    border-radius:100px;
+    border: 4px darkblue solid;
+    position:absolute;
+    left:150px
+}
+@keyframes circle {
+  from {
+    transform: rotateZ(0deg)
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}
+@keyframes earth {
+    from {
+    transform: translate3d(-10%, 0%, 0) rotate(0deg);
+  }
+  to {
+   transform: translate3d(-10%, 0%, 0) rotate(360deg);
+  }
+}</style>
+        <script>function datestring(){
+   var d= new Date()
+document.getElementById("date").innerHTML=d.toLocaleTimeString()
+}
+setInterval(datestring,1000)</script>
+      </html>
